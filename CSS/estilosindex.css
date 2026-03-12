@@ -1,0 +1,192 @@
+.Contenedor-Carrusel {
+    position: relative;
+    width: 95%; 
+    max-width: 1200px;
+    height: 500px; 
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 30px; 
+    background-color: #e86a9a; 
+    box-shadow: 0 15px 35px rgba(255, 182, 223, 0.4); 
+}
+
+.carrusel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: deslizar 40s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contenedor {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); 
+    transition: transform 0.5s ease;
+}
+
+
+.Contenedor-Carrusel:hover .carrusel {
+    animation-play-state: paused; 
+}
+
+@keyframes deslizar {
+    0%, 10% { transform: translateX(0%); }
+    12.5%, 22.5% { transform: translateX(-100%); }
+    25%, 35% { transform: translateX(-200%); }
+    37.5%, 47.5% { transform: translateX(-300%); }
+    50%, 60% { transform: translateX(-400%); }
+    62.5%, 72.5% { transform: translateX(-500%); }
+    75%, 85% { transform: translateX(-600%); }
+    87.5%, 97.5% { transform: translateX(-700%); }
+    100% { transform: translateX(0%); }
+}
+
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("../Material/Fondo/fondo.jpg")
+              no-repeat center center/cover;
+}
+
+
+
+.tituloLocales {
+    font-family: poppins, serif;
+    font-style: normal;
+    text-align: center;
+    font-size: 1.8vw;
+    margin: 20px 0;
+}
+
+.contenedor-Locales{
+    margin-bottom: 2rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contLocal{
+    align-items: center;
+    text-align: center;
+    width: 32vw;
+    height: auto;
+    margin: 0.5rem 2rem;
+    border: 0.2rem solid #571b02;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.contenedor-imagen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.card-title {
+  color: #5C4033;
+  font-weight: 700;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.infoLocales {
+    font-family: poppins, serif;
+    background-color: #fff;
+    padding: 0.7rem;
+    transition: max-height 0.3s ease;
+}
+
+.ciudad {
+    font-family: poppins, serif;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: bold;
+    margin: 0.3rem 0;
+}
+
+.direccion {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.contLocal:hover .contenedor-imagen {
+    height: 70%;
+}
+
+.contLocal:hover .contenedor-imagen img {
+    transform: scale(1.5);
+}
+
+.contLocal:hover .direccion {
+    opacity: 1;
+    max-height: max-content;
+}
+
+.frase p, .frase b {
+    font-style: normal;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+@media (max-width: 900px) {
+    .contenedor-Locales {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contLocal {
+        width: 40vw;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .contenedor-imagen {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .contenedor-imagen img {
+        width: 100%;
+        display: block;
+    }
+
+    .direccion {
+        opacity: 1;
+        max-height: none;
+        font-size: clamp(1rem, 4vw, 2rem);
+    }
+
+    .contLocal p,
+    .ciudad {
+        font-size: clamp(0.5rem, 2vw, 2rem);
+    }
+
+    .tituloLocales {
+        font-size: clamp(1.1rem, 5vw, 1rem);
+    }
+
+    .frase p, .frase b {
+        font-size: clamp(0.7rem, 2vw, 1rem);
+    }
+}

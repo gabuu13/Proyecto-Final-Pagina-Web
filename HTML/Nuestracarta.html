@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/estilosnuestracarta.css">
+    <link rel="stylesheet" href="../CSS/estilosencabezado.css">
+    <link rel="stylesheet" href="../CSS/estilospiedepagina.css">
+
+	<script src="../JS/encabezado.js"></script>
+    <script src="../JS/carta.js" defer></script>
+
+    <link rel="icon" href="../Material/logo/logo2.0.png" type="image/x-icon" />
+
+    <title>Nuestra Carta</title>
+</head>
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparente">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">🧁 Dulce Stacion</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="Nuestracarta.html">Nuestra Carta</a></li>
+          <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="frase">
+        <p class="frase-text">"Cada postre cuenta una historia... encuentra el tuyo."</p>
+    </div>
+	<div class="barra-busqueda">
+        <input type="text" id="buscadorInput" placeholder="Buscar...">
+        <button type="submit" id="btnBuscar">🔍</button>
+    </div>
+</header>
+<section>
+	<br>
+</section>
+<main>
+
+    <div class="Contenedor-principal">
+        
+        <div class="catalogo">
+            <div class="Categoria">
+                <h2>Categorias</h2>
+				<p>Todos</p>
+                <p>Tortas</p>
+                <p>Pie</p>
+                <p>Empanadas</p>
+                <p>Helados</p>
+                <p>Postre helado</p>
+                <p>Bocaditos dulces</p>
+                <p>Bocaditos Salados</p>
+                <p>Jugos y bebidas</p>
+                <p>Bebidas calientes</p>
+                <p>Decoraciones</p>
+            </div>
+            <div class="matrizProducto">
+                <div class="barra-filtro barra-filtro-pc">
+					<p class="Resultado">Nuestros productos</p>
+					<p class="Ordenar">Ordenar por:</p>
+					<select name="ordenamiento" class="Lista Lista2">
+					    <option value="0"></option>
+					    <option value="nombre-asc">Nombre A-Z</option>
+                        <option value="nombre-desc">Nombre Z-A</option>
+						<option value="precio-asc">Precio ASC</option>
+                        <option value="precio-desc">Precio DESC</option>
+					</select>
+				</div>
+				<div class="barra-filtro barra-filtro-movil">
+					<p class="CategoriasTxt">Categorias:	</p>
+					<select name="categoria" class="Lista Lista1">
+						<option value="">Todas las categorías</option>
+						<option value="Tortas">Tortas</option>
+						<option value="Pie">Pie</option>
+						<option value="Empanadas">Empanadas</option>
+						<option value="Helados">Helados</option>
+						<option value="Postre helado">Postre helado</option>
+						<option value="Bocaditos dulces">Bocaditos dulces</option>
+						<option value="Bocaditos Salados">Bocaditos Salados</option>
+						<option value="Jugos y bebidas">Jugos y bebidas</option>
+						<option value="Bebidas calientes">Bebidas calientes</option>
+						<option value="Decoraciones">Decoraciones</option>
+					</select>
+					<p class="Ordenar">Ordenar por:</p>
+					<select name="ordenamiento" class="Lista Lista2">
+						<option value="0"></option>
+						<option value="nombre-asc">Nombre A-Z</option>
+                        <option value="nombre-desc">Nombre Z-A</option>
+						<option value="precio-asc">Precio ASC</option>
+                        <option value="precio-desc">Precio DESC</option>
+					</select>
+				</div>
+                <div class="grid-productos">
+                </div>
+                <div class="boton-ver-mas">
+                    <button id="verMasBtn">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="Pie-Pagina" >
+        <div class="Logo-Redes">
+            <img src="../Material/logo/logo3.0.png" class="logo-pie" alt=""/>
+            <p>Encuéntranos en ...</p>
+            <div class="Redes-Pagina">
+                <img src="../Material/Icons/facebook.png" class="facebook" alt="">
+                <img src="../Material/Icons/instagram.png" class="instagram" alt="">
+                <img src="../Material/Icons/whatssapp.png" class="whatsapp" alt="">
+            </div>
+        </div>
+        <div class="Contacto-horario">
+            <h2>Contactanos</h2>
+            <div class="Contacto">
+                <img src="../Material/Icons/telefono.png" alt=""><p>(074) 444-444</p>
+            </div>
+            <div class="Contacto">
+                <img src="../Material/Icons/phonetext.png" alt=""><p>999 999 999</p>
+            </div>
+            <div class="Contacto">
+                <img src="../Material/Icons/mail.png" alt=""><p>dulcestacion@gmail.com</p>
+            </div>
+            <div class="Horario-atencion">
+                <h2 class="Horario">Horario de atención</h2>
+                <p class="Horario-txt">De lunes a domingo de 10am a 8pm</p>
+            </div>
+        </div>
+        <div class="ServicioCliente">
+            <h2 >Servicio Cliente</h2>
+            <p><a href="ServicioCliente.html">Preguntas Frecuentes</a></p>
+            <p>Politicas de cookies</p>
+            <p>Legales Web</p>
+            <p>Libro de reclamaciones</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
